@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 // third party imports
 import { AlertModule } from 'ngx-bootstrap';
@@ -28,7 +30,9 @@ import { HomeComponent } from './home/home.component';
     BsDropdownModule.forRoot(),
     CarouselModule.forRoot(),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
