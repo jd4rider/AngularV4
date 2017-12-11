@@ -1,3 +1,11 @@
-<p>
-  video-list works!
-</p>
+<h1>
+  {{title}} {{today | date:"short"}}
+</h1>
+
+<div *ngFor='let item of listofvideos'>
+  <a href='videos/{{item.slug}}'>{{item.name}}</a>
+
+  <div *ngIf='item.embed'>
+    <iframe width="560" height="315" [src]="getEmbedUrl(item) | safe" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+  </div>
+</div>
